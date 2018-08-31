@@ -224,8 +224,18 @@
      margin-left: auto;
  }
 
- .popular-item-title{
-         padding: 3rem;
+ .popular-item-title {
+     padding: 3rem;
+ }
+
+ .overlay-bg {
+     position: absolute;
+     top: 0;
+     left: 0;
+     display: block;
+     width: 100%;
+     background: rgba(0, 0, 0, 0.2);
+     height: 100%;
  }
  /* index-carousel-content*/
 
@@ -250,9 +260,11 @@
      -webkit-align-items: center;
      align-items: center;
  }
- .popular-recommendation .swiper-slide{
+
+ .popular-recommendation .swiper-slide {
      background: #fff;
  }
+
  .section-title {
      margin: 3rem 0;
      text-align: center;
