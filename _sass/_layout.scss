@@ -228,6 +228,7 @@
 
      padding: 3rem;
      margin: 10% 0 0;
+     z-index: 9999;
  }
 
  .popular-item-title {
@@ -235,8 +236,8 @@
      z-index: 9999;
      position: relative;
      font-size: 2rem;
-     color: #fff;
-     line-height: 1.2;
+     color: rgba(255, 255, 255, 0.9);
+     line-height: 1.3;
      margin: 0;
  }
 
