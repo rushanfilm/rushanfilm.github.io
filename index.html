@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<div class="home">
+    <ul class="post-list">
+        {% for post in paginator.posts %}
+        <li>
+            <div class="post-link">
+                <a class="artcle-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                <div class="content">
+                    {{ post.excerpt }}
+                </div>
+                <p class="post-meta">
+                    <span class="host-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                </p>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<!-- Page -->
+{% if paginator.total_pages > 1 %}
+<div class="paginateBox">
+    {% if paginator.previous_page %}
+    <a class="pageBtn pre-btn" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="iconfont icon-pre"></i><span>上一页</span>
+    </a> {% endif %} {% if paginator.next_page %}
+    <a class="pageBtn next-btn" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span>更多文章</span><i class="iconfont icon-next"></i>
+    </a> 
+    {% endif %}
+</div>
+{% endif %}
