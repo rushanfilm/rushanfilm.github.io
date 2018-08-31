@@ -239,13 +239,14 @@
      left: 0;
      display: block;
      width: 100%;
-     background: rgba(0, 0, 0, 0.2);
+     background: rgba(0, 0, 0, 0.3);
      height: 100%;
-     transition: all 0.5s ease;
+     transition: all 0.8s ease;
+     z-index: 99;
  }
 
  .overlay-bg:hover {
-     background: rgba(0, 0, 0, 0.5);
+     background: rgba(0, 0, 0, 0.6);
  }
 
  .popular-inner {
