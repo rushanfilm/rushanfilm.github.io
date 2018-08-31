@@ -236,12 +236,17 @@
      width: 100%;
      background: rgba(0, 0, 0, 0.2);
      height: 100%;
+     transition: all 0.5s ease;
+ }
+
+ .overlay-bg:hover {
+     background: rgba(0, 0, 0, 0.5);
  }
  /* index-carousel-content*/
 
  .index-carousel-content {
      height: 570px;
-     margin:  0;
+     margin: 0;
  }
 
  .swiper-slide {
@@ -286,6 +291,7 @@
      width: 100%;
      height: 100%;
      position: relative;
+     cursor: pointer;
  }
 
  .popilar-owl-item img {
