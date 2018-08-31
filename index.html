@@ -1,13 +1,8 @@
----
-layout: default
----
+--- layout: default ---
 <!-- fine-article -->
 <section class="fine-article section-module">
     <ul class="post-list">
         <div class="fine-article-wrapper">
-            <div class="fine-article-item">
-                <div class="fine-artcle-content"></div>
-            </div>
             {% for post in paginator.posts %}
             <li class="fine-article-item">
                 <div class=" fine-artcle-content">
@@ -24,9 +19,8 @@ layout: default
             <div class="clear-both"></div>
         </div>
     </ul>
-<div class="fine-artcle-content-hr"></div>
+    <div class="fine-artcle-content-hr"></div>
 </section>
-
 <!-- Page -->
 {% if paginator.total_pages > 1 %}
 <div class="paginateBox">
@@ -34,7 +28,6 @@ layout: default
     <a class="pageBtn pre-btn" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}"><i class="iconfont icon-pre"></i><span>上一页</span>
     </a> {% endif %} {% if paginator.next_page %}
     <a class="pageBtn next-btn" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}"><span>更多文章</span><i class="iconfont icon-next"></i>
-    </a> 
-    {% endif %}
+    </a> {% endif %}
 </div>
 {% endif %}
