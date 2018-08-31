@@ -1,23 +1,32 @@
 ---
 layout: default
 ---
-<div class="home">
+<!-- fine-article -->
+<section class="fine-article section-module">
     <ul class="post-list">
-        {% for post in paginator.posts %}
-        <li>
-            <div class="post-link">
-                <a class="artcle-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-                <div class="content">
-                    {{ post.excerpt }}
-                </div>
-                <p class="post-meta">
-                    <span class="host-date">{{ post.date | date: "%Y.%m.%d" }}</span>
-                </p>
+        <div class="fine-article-wrapper">
+            <div class="fine-article-item">
+                <div class="fine-artcle-content"></div>
             </div>
-        </li>
-        {% endfor %}
+            {% for post in paginator.posts %}
+            <li class="fine-article-item">
+                <div class=" fine-artcle-content">
+                    <a class="artcle-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    <div class="content">
+                        {{ post.excerpt }}
+                    </div>
+                    <p class="post-meta">
+                        <span class="host-date">{{ post.date | date: "%Y.%m.%d" }}</span>
+                    </p>
+                </div>
+            </li>
+            {% endfor %}
+            <div class="clear-both"></div>
+        </div>
     </ul>
-</div>
+<div class="fine-artcle-content-hr"></div>
+</section>
+
 <!-- Page -->
 {% if paginator.total_pages > 1 %}
 <div class="paginateBox">
