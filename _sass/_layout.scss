@@ -224,13 +224,20 @@
      margin-left: auto;
  }
 
- .popular-item-title {
+ .popular-post-meta {
+
      padding: 3rem;
+     margin: 10% 0 0;
+ }
+
+ .popular-item-title {
+
      z-index: 9999;
      position: relative;
      font-size: 2rem;
      color: #fff;
      line-height: 1.2;
+     margin: 0;
  }
 
  .overlay-bg {
