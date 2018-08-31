@@ -78,7 +78,7 @@
 
  .swiper-pagination-bullet-active {
      opacity: 1!important;
-     background: #fff !important;
+     background: rgba(255, 255, 255, 0.8) !important;
  }
 
  .swiper-button-prev,
@@ -241,7 +241,7 @@
 
  .index-carousel-content {
      height: 570px;
-     margin: 1rem 0 0;
+     margin:  0;
  }
 
  .swiper-slide {
@@ -347,7 +347,7 @@
          padding: 0 0 0 30px;
      }
      .index-carousel-content {
-         margin: 1rem 20px 0;
+         margin: 0 20px;
          height: 450px;
      }
      .fine-article-wrapper .fine-article-item {
