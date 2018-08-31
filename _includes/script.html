@@ -1,45 +1,31 @@
+<script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
+<!-- Initialize Swiper -->
 <script>
-    
-var url = document.location.href; // 获取当前浏览器路径
+var swiper = new Swiper('.index-swiper', {
+    speed: 800,
+    slidesPerView: 2,
+    spaceBetween: 30,
+    centeredSlides: true,
+    loop: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'custom',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
 
-/**
- *
- 复制粘贴功能(版权)
- *
- @method addLink
- *
- @return {void}  无返回值
- */
-function addLink(msg) {
-    var body_element = document.getElementsByTagName("body")[0];
-    var selection;
-    if (window.getSelection) {
-        selection = window.getSelection()
-    } else {
-        if (document.getSelection) {
-            selection = document.getSelection()
-        } else {
-            if (document.selection) {
-                selection = document.selection.createRange().text
-            } else {
-                selection = ""
-            }
-        }
-    }
-    var pagelink = "<br /><br />作者: RenChao Guan<br />链接: <a href='" + url + "'>" + url + "</a>" + "<br />来源:FSUX.ME<br />著作权归 FSUX 网站所有,商业转载请联系作者获得授权,非商业转载请注明出处。";
-    var copy_text = selection + pagelink;
-    var new_div = document.createElement("div");
-    new_div.style.left = "-99999px";
-    new_div.style.position = "absolute";
-    body_element.appendChild(new_div);
-    new_div.innerHTML = copy_text;
-    selection.selectAllChildren(new_div);
-    window.setTimeout(function() {
-            body_element.removeChild(new_div)
-        },
-        0)
-}
-
-document.body.oncopy = addLink;
-
+var swiper = new Swiper('.popular-recommendation-swiper', {
+    speed: 1500,
+    slidesPerView: 4,
+    slidesPerGroup: 4,
+    spaceBetween: 30,
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
 </script>
