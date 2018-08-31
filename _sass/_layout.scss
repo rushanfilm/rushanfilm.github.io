@@ -317,6 +317,10 @@
      }
      .index-carousel-content {
          margin: 1rem 20px 0;
+         height: 450px;
+     }
+     .fine-article-wrapper .fine-article-item {
+         width: calc(100% - 40px);
      }
      .swiper-button-next,
      .swiper-button-prev {
