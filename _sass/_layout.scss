@@ -223,7 +223,6 @@
      margin-right: auto;
      margin-left: auto;
  }
-
  /* index-carousel-content*/
 
  .index-carousel-content {
@@ -264,8 +263,6 @@
      padding: 0 20px;
  }
 
- .popular-recommendation .swiper-pagination {}
-
  .popular-recommendation-swiper .swiper-slide {
      height: 320px;
  }
@@ -285,6 +282,7 @@
      float: left;
      padding: 0 20px;
      margin: 2rem 0 0;
+     width: calc(33.3333333333% - 40px);
  }
 
  .fine-artcle-content {
@@ -315,9 +313,14 @@
          padding: 0 20px;
      }
      .nav ul li {
-         padding: 0 0 0 22px;
+         padding: 0 0 0 30px;
      }
      .index-carousel-content {
          margin: 1rem 20px 0;
+     }
+     .swiper-button-next,
+     .swiper-button-prev {
+
+         display: none;
      }
  }
