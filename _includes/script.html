@@ -16,15 +16,16 @@ if (currDeviceWidth > 1200) {
     // 分页器样式类型
     var paginationType = 'custom';
 
-    var indexPrevEl = null,
-        indexNextEl = null;
+
+    var indexPrevEl = '.swiper-button-prev',
+        indexNextEl = '.swiper-button-next';
 
     var popularSlidesPerView = 4;
 
 } else {
 
     // 设置slider容器能够同时显示的 slides 数量
-    var indexSlidesPerView = 2;
+    var indexSlidesPerView = 1;
 
     //在 slide 之间设置距离
     indexSpaceBetween = 0;
@@ -32,8 +33,8 @@ if (currDeviceWidth > 1200) {
     // 分页器样式类型
     var paginationType = 'bullets';
 
-    var indexPrevEl = '.swiper-button-prev',
-        indexNextEl = '.swiper-button-next';
+    var indexPrevEl = null,
+        indexNextEl = null;
 
     var popularSlidesPerView = 1;
 
