@@ -174,32 +174,6 @@ pre
     }
 }
 
-
-/*Wrapper*/
-.page-content
-{
-    position: relative;
-    z-index: 998;
-
-    width: 880px;
-    height: 100%;
-    min-height: 100%;
-    margin: 0 auto;
-    padding: 60px;
-
-    border-radius: 4px;
-    background: #fff;
-
-    @extend %clearfix;
-    @include media-query($on-laptop)
-    {
-        width: 95%;
-        padding: 0 0 25px;
-
-        box-shadow: none;
-    }
-}
-
 /* Clearfix*/
 %clearfix
 {
