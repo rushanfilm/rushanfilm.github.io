@@ -16,9 +16,11 @@ if (currDeviceWidth > 1000) {
     // 分页器样式类型
     var paginationType = 'custom';
 
-
-    var indexPrevEl = '.swiper-button-prev',
-        indexNextEl = '.swiper-button-next';
+    // 前进后退按钮
+    var indexNavigation = {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    }
 
     var popularSlidesPerView = 4;
 
@@ -33,8 +35,8 @@ if (currDeviceWidth > 1000) {
     // 分页器样式类型
     var paginationType = 'bullets';
 
-    var indexPrevEl = '',
-        indexNextEl = '';
+    // 前进后退按钮
+    var indexNavigation = {}
 
     var popularSlidesPerView = 1;
 
@@ -52,10 +54,7 @@ var swiper = new Swiper('.index-swiper', {
         type: paginationType,
         clickable: true,
     },
-    navigation: {
-        nextEl: indexNextEl,
-        prevEl: indexPrevEl,
-    },
+    navigation: indexNavigation,
 });
 
 //初始化滚动热门推荐列表参数  
