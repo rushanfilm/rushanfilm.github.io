@@ -1,12 +1,49 @@
 <script src="https://cdn.bootcss.com/Swiper/4.3.0/js/swiper.min.js"></script>
 <!-- Initialize Swiper -->
 <script>
+//获取当前设备屏幕宽度
+var currDeviceWidth = window.screen.availWidth;
+
+
+if (currDeviceWidth > 1200) {
+
+    // 设置slider容器能够同时显示的 slides 数量
+    var indexSlidesPerView = 1;
+
+    //在 slide 之间设置距离
+    indexSpaceBetween = 30;
+
+    // 分页器样式类型
+    var paginationType = 'custom';
+
+    var indexPrevEl = null,
+        indexNextEl = null;
+
+    var popularSlidesPerView = 4;
+
+} else {
+
+    // 设置slider容器能够同时显示的 slides 数量
+    var indexSlidesPerView = 2;
+
+    //在 slide 之间设置距离
+    indexSpaceBetween = 0;
+
+    // 分页器样式类型
+    var paginationType = 'bullets';
+
+    var indexPrevEl = '.swiper-button-prev',
+        indexNextEl = '.swiper-button-next';
+
+    var popularSlidesPerView = 1;
+
+}
 
 //初始化滚动首页推荐列表参数    
 var swiper = new Swiper('.index-swiper', {
     speed: 800,
-    slidesPerView: 2,
-    spaceBetween: 30,
+    slidesPerView: indexSlidesPerView,
+    spaceBetween: indexSpaceBetween,
     centeredSlides: true,
     loop: true,
     pagination: {
@@ -15,19 +52,62 @@ var swiper = new Swiper('.index-swiper', {
         clickable: true,
     },
     navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: indexNextEl,
+        prevEl: indexPrevEl,
     },
 });
+
 //初始化滚动热门推荐列表参数  
 var swiper = new Swiper('.popular-recommendation-swiper', {
     speed: 1500,
-    slidesPerView: 4,
-    slidesPerGroup: 4,
+    slidesPerView: popularSlidesPerView,
+    slidesPerGroup: popularSlidesPerView,
     spaceBetween: 30,
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
     },
 });
+
+var url = document.location.href; // 获取当前浏览器路径
+
+/**
+ *
+ 复制粘贴功能(版权)
+ *
+ @method addLink
+ *
+ @return {void}  无返回值
+ */
+function addLink(msg) {
+    var body_element = document.getElementsByTagName("body")[0];
+    var selection;
+    if (window.getSelection) {
+        selection = window.getSelection()
+    } else {
+        if (document.getSelection) {
+            selection = document.getSelection()
+        } else {
+            if (document.selection) {
+                selection = document.selection.createRange().text
+            } else {
+                selection = ""
+            }
+        }
+    }
+    var pagelink = "<br /><br />作者: Rushanf<br />链接: <a href='" + url + "'>" + url + "</a>" + "<br />来源:rushanfilm.com<br />著作权归 FSUX 网站所有,商业转载请联系作者获得授权,非商业转载请注明出处。";
+    var copy_text = selection + pagelink;
+    var new_div = document.createElement("div");
+    new_div.style.left = "-99999px";
+    new_div.style.position = "absolute";
+    body_element.appendChild(new_div);
+    new_div.innerHTML = copy_text;
+    selection.selectAllChildren(new_div);
+    window.setTimeout(function() {
+            body_element.removeChild(new_div)
+        },
+        0)
+}
+
+document.body.oncopy = addLink;
 </script>
