@@ -1,14 +1,14 @@
 # Site settings
 
-title: 如山 | FSUX 
-SEOTitle: 关人潮【如山】软件工程师
-SUBSTitle: FSUX
+title: 如山 | rushanfilm
+SEOTitle: 如山【胶片年代】
+SUBSTitle: rushanfilm
 email: fsux@outlook.com
-description: "关人潮,FSUX,如山,个人博客,软件工程师,设计师,旨在探索极致用户体验与最佳工程实践"
+description: "一个有关胶片摄影、生活、艺术、美图、拍照技巧、胶片相机器材介绍，以及个人胶片摄影作品分享的综合性网站。取景框教会了我们看世界的另一种方式，我们就是爱胶片。拿起相机，拍照吧！"
 baseurl: "" # the subpath of your site, e.g. /blog/
-keyword: "关人潮,如山,关人潮的技术博客,软件工程师,架构,FSUX,UI,UX,FSUX Blog,设计,数据可视化,数据挖掘,大数据"
+keyword: "胶片, 摄影, 拍照, 旅行, 日系, 小清新, 分享, 胶卷, 菲林, 器材, 投稿, 文艺, 胶卷相机, 胶片相机, 胶片摄影"
 url: "https://fsux.me" # the base hostname & protocol for your site
-author: "关人潮,如山,FSUX"
+author: "如山,rushanfilm"
 pygments: true
 # Outputting
 
