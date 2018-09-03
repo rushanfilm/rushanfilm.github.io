@@ -297,6 +297,14 @@
      margin: 0;
  }
 
+ .index-carousel-content .swiper-slide {
+     width: 1200px;
+     border-radius: 2px;
+     position: relative;
+     z-index: 1;
+     overflow: hidden;
+ }
+
  .swiper-slide {
      text-align: center;
      font-size: 18px;
