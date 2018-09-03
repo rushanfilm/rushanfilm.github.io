@@ -104,11 +104,6 @@
  .swiper-button-prev:hover {
      color: #fff;
  }
-
- .index-carousel-content .swiper-slide.swiper-slide-active {
-     width: 1200px !important;
-     overflow: visible;
- }
  /* header */
 
  .header {
@@ -300,6 +295,15 @@
  .index-carousel-content {
      height: 570px;
      margin: 0;
+ }
+
+ .index-carousel-content .swiper-slide {
+     width: 1200px;
+ }
+
+ .index-carousel-content .swiper-slide.swiper-slide-active {
+     width: 1200px !important;
+     overflow: visible;
  }
 
  .swiper-slide {
