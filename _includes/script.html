@@ -26,6 +26,8 @@ if (currDeviceWidth > 1000) {
 
     var popularSlidesPerView = 4;
 
+    var indexSlidesWidth = 800;
+
 } else {
 
     // 设置slider容器能够同时显示的 slides 数量
@@ -47,12 +49,14 @@ if (currDeviceWidth > 1000) {
 
     var popularSlidesPerView = 1;
 
+    var indexSlidesWidth = window.innerWidth;
+
 }
 
 //初始化滚动首页推荐列表参数    
 var swiper = new Swiper('.index-swiper', {
     speed: 800,
-    width: 1000,
+    width: indexSlidesWidth,
     slidesPerView: indexSlidesPerView,
     spaceBetween: indexSpaceBetween,
     slidesPerGroup: indexSlidesPerGroup,
