@@ -11,7 +11,7 @@ if (currDeviceWidth > 1000) {
     var indexSlidesPerView = 2;
 
     //在 slide 之间设置距离
-    indexSpaceBetween = 20;
+    indexSpaceBetween = 30;
 
     // 分页器样式类型
     var paginationType = 'custom';
@@ -22,11 +22,7 @@ if (currDeviceWidth > 1000) {
         prevEl: '.swiper-button-prev',
     }
 
-    var indexSlidesPerGroup = 2;
-
     var popularSlidesPerView = 4;
-
-    var indexSlidesWidth = 1000;
 
 } else {
 
@@ -45,21 +41,15 @@ if (currDeviceWidth > 1000) {
         prevEl: '',
     }
 
-    var indexSlidesPerGroup = 1;
-
     var popularSlidesPerView = 1;
-
-    var indexSlidesWidth = window.innerWidth - 40;
 
 }
 
 //初始化滚动首页推荐列表参数    
-var indexSwiper = new Swiper('.index-swiper', {
+var swiper = new Swiper('.index-swiper', {
     speed: 800,
-    width: indexSlidesWidth,
     slidesPerView: indexSlidesPerView,
     spaceBetween: indexSpaceBetween,
-    slidesPerGroup: indexSlidesPerGroup,
     centeredSlides: true,
     loop: true,
     pagination: {
@@ -71,7 +61,7 @@ var indexSwiper = new Swiper('.index-swiper', {
 });
 
 //初始化滚动热门推荐列表参数  
-var popularSwiper = new Swiper('.popular-recommendation-swiper', {
+var swiper = new Swiper('.popular-recommendation-swiper', {
     speed: 1500,
     slidesPerView: popularSlidesPerView,
     slidesPerGroup: popularSlidesPerView,
