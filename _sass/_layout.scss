@@ -104,6 +104,11 @@
  .swiper-button-prev:hover {
      color: #fff;
  }
+
+ .index-carousel-content .swiper-slide.swiper-slide-active {
+     width: 1200px !important;
+     overflow: visible;
+ }
  /* header */
 
  .header {
