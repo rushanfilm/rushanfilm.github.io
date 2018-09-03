@@ -49,9 +49,6 @@ if (currDeviceWidth > 1000) {
 var swiper = new Swiper('.index-swiper', {
     speed: 800,
     width: 1000,
-    autoplay: {
-        delay: 3000, //3秒切换一次
-    },
     slidesPerView: indexSlidesPerView,
     spaceBetween: indexSpaceBetween,
     centeredSlides: true,
@@ -70,9 +67,6 @@ var swiper = new Swiper('.popular-recommendation-swiper', {
     slidesPerView: popularSlidesPerView,
     slidesPerGroup: popularSlidesPerView,
     spaceBetween: 30,
-    autoplay: {
-        delay: 3000, //3秒切换一次
-    },
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
