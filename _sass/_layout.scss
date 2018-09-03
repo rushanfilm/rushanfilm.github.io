@@ -212,8 +212,6 @@
  .swiper-container {
      width: 100%;
      height: 100%;
-     margin-left: auto;
-     margin-right: auto;
  }
 
  .section-box {
@@ -297,14 +295,6 @@
      margin: 0;
  }
 
- .index-carousel-content .swiper-slide {
-     width: 1000px!important;
-     border-radius: 2px;
-     position: relative;
-     z-index: 1;
-     overflow: hidden;
- }
-
  .swiper-slide {
      text-align: center;
      font-size: 18px;
@@ -320,6 +310,7 @@
      -ms-flex-align: center;
      -webkit-align-items: center;
      align-items: center;
+     border-radius: 4px;
  }
 
  .popular-recommendation .swiper-slide {
