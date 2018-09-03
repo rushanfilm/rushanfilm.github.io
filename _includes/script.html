@@ -22,6 +22,8 @@ if (currDeviceWidth > 1000) {
         prevEl: '.swiper-button-prev',
     }
 
+    var indexSlidesPerGroup = 2;
+
     var popularSlidesPerView = 4;
 
 } else {
@@ -41,6 +43,8 @@ if (currDeviceWidth > 1000) {
         prevEl: '',
     }
 
+    var indexSlidesPerGroup = 1;
+
     var popularSlidesPerView = 1;
 
 }
@@ -51,6 +55,7 @@ var swiper = new Swiper('.index-swiper', {
     width: 1000,
     slidesPerView: indexSlidesPerView,
     spaceBetween: indexSpaceBetween,
+    slidesPerGroup: indexSlidesPerGroup,
     centeredSlides: true,
     loop: true,
     pagination: {
